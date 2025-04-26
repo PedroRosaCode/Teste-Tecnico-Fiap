@@ -4,27 +4,28 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 @media (prefers-reduced-motion: no-preference) {
   :root {
     scroll-behavior: smooth;
   }
 }
 
-
 ::-webkit-scrollbar {
   width: 4px;
-  height: 5px; 
+  height: 5px;
 }
 
 ::-webkit-scrollbar-track {
-  background:  #ff8bcb; 
+  background: #ff8bcb;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #ED145B; 
-  border-radius: 4px; 
+  background: #ed145b;
+  border-radius: 4px;
 }
 
+/* Fontes que irei utilizar de acordo com os Assents */
 @font-face {
   font-family: "GothamHTF-Medium";
   src: url("/assets/fonts/fonts/gotham/GothamHTF-Medium.otf") format("truetype");
@@ -44,7 +45,6 @@
   font-style: normal;
 }
 
-
 .shadow {
   background: #000000;
   background: linear-gradient(
@@ -59,28 +59,45 @@
 }
 
 /* HEADER */
+
+
 header {
   background-color: #111;
-  height: 80px;
+  height: 80px; 
   display: flex;
   align-items: center;
   justify-content: center;
-  border-bottom: 3px solid #ED145B;
-  position: relative;
+ 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
+
+.scroll-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px; 
+  background-color: #ed145b; 
+  width: 0%; 
+  transition: width 0.2s ease;
+}
+
+
 
 .logo {
   height: 25px;
 }
 
-/* HERO (Imagem de fundo + texto) */
 .hero {
-  background-image: url("/assets/imgs/imgs/header.jpg"); /* Sua imagem de fundo */
+  background-image: url("/assets/imgs/imgs/header.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  height: calc(100vh - 90px); /* 100% da tela menos o header */
+  height: calc(100vh - 90px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -95,11 +112,11 @@ header {
 
 .hero-text h1 {
   font-size: 80px;
-  color: #ED145B;
+  color: #ed145b;
   font-weight: 500;
   letter-spacing: 2px;
-  color: transparent; /* Deixa o fundo invisível */
-  -webkit-text-stroke: 2px #ff0057; /* Define a borda (stroke) rosa */
+  color: transparent;
+  -webkit-text-stroke: 2px #ed145b;
 }
 
 .hero-text h2 {
@@ -134,7 +151,8 @@ header {
   font-family: "GothamHTF-Light";
 }
 
-.arrow-down {
+.arrow-down,
+.up-Button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -145,6 +163,27 @@ header {
   margin-top: 8px;
   text-align: center;
   line-height: 50%;
+  box-shadow: 0 0 5px rgba(172, 193, 204, 0.7); 
+  transition: box-shadow 0.3s ease; 
+}
+
+.up-Button {
+  display: none;
+  z-index: 99;
+  border: 1px solid #ed145b;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  box-shadow: 0 0 5px rgba(237, 20, 91, 0.7); 
+}
+
+.arrow-down:hover,
+.up-Button:hover {
+  box-shadow: 0 0 10px rgba(172, 193, 204, 0.9); 
+}
+
+.up-Button:hover {
+  box-shadow: 0 0 10px rgba(237, 20, 91, 0.9); 
 }
 
 /* PAGE 2 */
@@ -192,7 +231,7 @@ header {
   line-height: 1.5;
 }
 .texto-lateral span {
-  color: #ED145B;
+  color: #ed145b;
 }
 
 .texto-principal img {
@@ -224,7 +263,7 @@ header {
 }
 
 .sublista li {
-  color: #ED145B; /* Rosa semelhante ao usado no texto da imagem */
+  color: #ed145b; 
   font-size: 20px;
 }
 
@@ -247,7 +286,11 @@ header {
 
 .container {
   background: #001829;
-  background: linear-gradient(90deg, rgba(0, 24, 41, 1) 0%, rgba(0, 0, 0, 1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 24, 41, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
   padding: 40px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   width: 100%;
@@ -255,7 +298,7 @@ header {
 
 .main-title {
   font-family: "GothamHTF-Medium";
-  color: #ACC1CC;
+  color: #acc1cc;
   text-align: left;
   font-weight: 500;
   margin-bottom: 50px;
@@ -269,18 +312,18 @@ header {
   width: 95%;
 }
 
-.accordion-container{
+.accordion-container {
   display: flex;
   justify-content: end;
 }
 
 .accordion-item {
-  border-top: 2px solid #555555 ;
+  border-top: 2px solid #555555;
   overflow: hidden;
   transition: 0.8s ease;
 }
 .accordion-item:last-child {
-  border-bottom: 2px solid #555555 ;
+  border-bottom: 2px solid #555555;
 }
 
 .accordion-header {
@@ -288,7 +331,7 @@ header {
   font-size: 25px;
   font-weight: 700px;
   background-color: transparent;
-  color: #ACC1CC;
+  color: #acc1cc;
   padding: 15px;
   border: none;
   width: 100%;
@@ -300,7 +343,6 @@ header {
   font-weight: bold;
   transition: background-color 0.5s ease-out;
 }
-
 
 .icon {
   font-size: 1.2em;
@@ -314,7 +356,7 @@ header {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.5s ease-out;
-  color: #AFAFAF;
+  color: #afafaf;
 }
 
 .accordion-content p {
@@ -323,30 +365,32 @@ header {
 }
 
 .accordion-item.active {
-  border-top:2px solid #ED145B;
+  border-top: 2px solid #ed145b;
   transition: 0.8s ease;
 }
 
 /* Page 5 */
 
 .secao-saber-mais {
-  background: linear-gradient(90deg, rgba(0, 24, 41, 1) 0%, rgba(0, 0, 0, 1) 100%);
-  color: #ACC1CC; /* Texto branco */
+  background: linear-gradient(
+    90deg,
+    rgba(0, 24, 41, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  color: #acc1cc;
   display: flex;
   font-family: "GothamHTF-Medium";
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 850px; /* Altura mínima para visualização */
+  min-height: 850px;
   padding: 40px;
   text-align: center;
 }
-.secao-saber-mais h2{
+.secao-saber-mais h2 {
   font-size: 80px;
   font-weight: 500;
 }
-
-
 
 .botao-contato {
   font-size: 20px;
@@ -354,33 +398,32 @@ header {
   display: inline-block;
   padding: 15px 30px;
   text-decoration: none;
-  color:#ED145B; /* Cor da borda e texto do botão */
-  border: 2px solid #ED145B;
+  color: #ed145b; 
+  border: 2px solid #ed145b;
   border-radius: 5px;
   font-weight: 500;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .botao-contato:hover {
-  background-color: #ED145B;
+  background-color: #ed145b;
   color: #000000;
 }
 
-
 /* Modal */
 .modal {
-  cursor: url('/assets/svgs/cursor-close.svg'), auto;
+  cursor: url("/assets/svgs/cursor-close.svg"), auto;
   justify-content: center;
   align-items: center;
-  display: none; /* Inicialmente escondido */
-  position: fixed; /* Fica fixo na tela */
-  z-index: 1; /* Fica por cima de outros elementos */
+  display: none;
+  position: fixed;
+  z-index: 1;
   left: 0;
   top: 0;
-  width: 100%; /* Largura total */
-  height: 100%; /* Altura total */
-  overflow: auto; /* Habilita scroll se a imagem for muito grande */
-  background-color: rgba(0,0,0,0.9); /* Fundo preto com transparência */
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 .modal-conteudo {
@@ -388,19 +431,31 @@ header {
   display: block;
   width: 80%;
   max-width: 60%;
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  transform: scale(0.9);
+}
+.modal-conteudo.ativo {
+  opacity: 1;
+  transform: scale(1);
 }
 
-
-
-
 @-webkit-keyframes zoom {
-  from {-webkit-transform:scale(0)}
-  to {-webkit-transform:scale(1)}
+  from {
+    -webkit-transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
 }
 
 @keyframes zoom {
-  from {transform:scale(0)}
-  to {transform:scale(1)}
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
 .fechar {
@@ -421,9 +476,9 @@ header {
   cursor: pointer;
 }
 
-/* Para telas menores que 700px de largura */
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 700px) {
   .modal-conteudo {
     width: 100%;
   }
 }
+
