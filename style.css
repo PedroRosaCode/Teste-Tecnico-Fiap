@@ -17,7 +17,7 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #ff64b9;
+  background: #ff37a5;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -60,14 +60,13 @@
 
 /* HEADER */
 
-
 header {
   background-color: #111;
-  height: 80px; 
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
- 
+
   position: fixed;
   top: 0;
   left: 0;
@@ -79,9 +78,9 @@ header {
   position: absolute;
   bottom: 0;
   left: 0;
-  height: 4px; 
-  background-color: #ed145b; 
-  width: 0%; 
+  height: 4px;
+  background-color: #ed145b;
+  width: 0%;
   transition: width 0.2s ease;
 }
 
@@ -106,11 +105,10 @@ header {
 .hero-text {
   position: relative;
   z-index: 1;
-  /* hyphens: auto; */
 }
 
 .hero-text h1 {
-  font-size: 80px;
+  font-size: 70px;
   color: #ed145b;
   font-weight: 500;
   letter-spacing: 2px;
@@ -120,17 +118,17 @@ header {
 
 .hero-text h2 {
   font-weight: 500;
-  font-size: 80px;
+  font-size: 70px;
   color: #d1dce5;
   margin: 10px 0;
 }
 
 .hero-text p {
-  max-width: 800px;
+  max-width: 700px;
   margin-top: 20px;
   font-size: 20px;
   color: #b0b0b0;
-  line-height: 1.6;
+  line-height: 1;
   text-align: justify;
 }
 
@@ -163,8 +161,8 @@ header {
   margin-top: 20px;
   text-align: center;
   line-height: 50%;
-  box-shadow: 0 0 5px #acc1cc; 
-  transition: box-shadow 0.3s ease; 
+  box-shadow: 0 0 5px #acc1cc;
+  transition: box-shadow 0.3s ease;
 }
 
 .up-Button {
@@ -174,19 +172,19 @@ header {
   position: fixed;
   right: 20px;
   bottom: 20px;
-  box-shadow: 0 0 5px #ed145b; 
+  box-shadow: 0 0 5px #ed145b;
 }
 
 .arrow-down:hover,
 .up-Button:hover {
-  box-shadow: 0 0 10px #acc1cc; 
+  box-shadow: 0 0 10px #acc1cc;
 }
 
 .up-Button:hover {
-  box-shadow: 0 0 10px #ed145b; 
+  box-shadow: 0 0 10px #ed145b;
 }
 
-/* PAGE 2 */
+/* Página 2 */
 
 .educacao-tech {
   padding: 100px 50px;
@@ -265,11 +263,11 @@ header {
 }
 
 .sublista li {
-  color: #ed145b; 
+  color: #ed145b;
   font-size: 20px;
 }
 
-/* PAGE 3 */
+/* Página 3 */
 .imagem-descanso .imagem {
   height: 500px;
   object-fit: cover;
@@ -284,7 +282,7 @@ header {
   height: 60vh;
 }
 
-/* Page 4 */
+/* Página 4  */
 
 .container {
   background: #001829;
@@ -346,10 +344,6 @@ header {
   font-weight: bold;
   transition: background-color 0.5s ease-out;
 }
-/* 
-.icon{
-
-} */
 
 .accordion-content {
   text-align: justify;
@@ -373,7 +367,7 @@ header {
   transition: 0.8s ease;
 }
 
-/* Page 5 */
+/* Página 5 */
 
 .secao-saber-mais {
   background: linear-gradient(
@@ -402,7 +396,7 @@ header {
   display: inline-block;
   padding: 15px 30px;
   text-decoration: none;
-  color: #ed145b; 
+  color: #ed145b;
   border: 2px solid #ed145b;
   border-radius: 5px;
   font-weight: 500;
@@ -490,18 +484,19 @@ header {
   .title {
     font-size: 60px !important;
   }
-  .hero-text p{
-  max-width: 700px;
+  .hero-text p {
+    max-width: 700px;
   }
 }
 @media only screen and (max-width: 720px) {
   .accordion-content {
     max-height: 600px !important;
   }
-  .conteudo{
+  .conteudo {
     flex-direction: column;
   }
-  .texto-lateral, .texto-principal{
+  .texto-lateral,
+  .texto-principal {
     width: 100%;
   }
 }
@@ -510,44 +505,43 @@ header {
   .title {
     font-size: 40px !important;
   }
-  .hero-text p{
+  .hero-text p {
     max-width: 400px;
-    }
-    .accordion-header{
-      font-size: 25px;
-      line-height: 1.5;
-    }
+  }
+  .accordion-header {
+    font-size: 25px;
+    line-height: 1.5;
+  }
 }
 @media only screen and (max-width: 430px) {
   .title {
     font-size: 30px !important;
   }
-    .accordion-header{
-      font-size: 20px;
-      line-height: 1.5;
-    }
-    .accordion-content {
-      max-height: 600px !important;
-    }
-    .accordion-content p{
-      font-size: 15px;
-    }
-    .texto-lateral li{
-      font-size: 15px;
-      text-align: left;
-    }
-    .texto-principal{
-      font-size: 15px;
-    }
-    .boot{
-      font-size: 20px;
-    }
+  .accordion-header {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+  .accordion-content {
+    max-height: 600px !important;
+  }
+  .accordion-content p {
+    font-size: 15px;
+  }
+  .texto-lateral li {
+    font-size: 15px;
+    text-align: left;
+  }
+  .texto-principal {
+    font-size: 15px;
+  }
+  .boot {
+    font-size: 20px;
+  }
 
-    .hero{
-      height: 95vh;
-    }
-    .scroll-down{
-      bottom: 10px;
-    }
-  
+  .hero {
+    height: 95vh;
+  }
+  .scroll-down {
+    bottom: 10px;
+  }
 }
