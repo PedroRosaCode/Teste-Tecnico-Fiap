@@ -32,7 +32,6 @@ Este projeto implementa várias interações de front-end usando **JavaScript**,
 ### Barra de Progresso de Scroll
 
 * Uma linha de progresso (`.scroll-line`) acompanha o quanto da página foi percorrido.
-* O header muda de estilo e desaparece ao rolar para baixo, reaparecendo ao rolar para cima.
 
 ## 🛠️ Tecnologias Utilizadas
 
