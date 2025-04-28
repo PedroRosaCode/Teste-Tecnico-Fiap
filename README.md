@@ -55,11 +55,34 @@ Este projeto implementa várias interações de front-end usando **JavaScript**,
 
 ## 👨‍💻 Como usar
 
-1.  Clone o repositório:
+1.  **Clonar o Repositório:**
+    Abra seu terminal ou prompt de comando e navegue até o diretório onde você deseja clonar o projeto. Execute o seguinte comando:
+
     ```bash
-    git clone [https://github.com/PedroRosaCode/Teste-Tecnico-Fiap.git](https://github.com/PedroRosaCode/Teste-Tecnico-Fiap.git)
+    git clone https://github.com/PedroRosaCode/Teste-Tecnico-Fiap
+
+2.  **Navegar até o Diretório do Projeto:**
+    Após a clonagem, entre na pasta do projeto:
+
+    ```bash
+    cd Teste-Tecnico-Fiap
     ```
-2.  Abra o `index.html` no seu navegador.
+3.  **Abrindo o arquivo `index.html` diretamente no navegador:**
+    Localize o arquivo principal HTML do projeto (`index.html`) no seu sistema de arquivos e clique duas vezes nele. O seu navegador padrão deverá abrir o projeto.
+
+4.  **Abrindo pelo Visual Studio Code (VS Code):**
+    Se você utiliza o VS Code, siga estes passos:
+    * Abra a pasta do projeto no VS Code
+    * **Opção 1: Abrindo o `index.html`:** Navegue até o arquivo `index.html` no painel Explorer do VS Code e clique duas vezes para abri-lo no editor. Em seguida, clique com o botão direito em qualquer lugar dentro do arquivo `index.html` e selecione a opção "Abrir no Navegador Padrão".
+    * **Opção 2: Utilizando a extensão Live Server (recomendado para desenvolvimento):**
+        * Certifique-se de ter a extensão Live Server instalada no VS Code.
+        * Abra o arquivo `index.html` no editor do VS Code.
+        * Clique com o botão direito em qualquer lugar dentro do arquivo `index.html` e selecione a opção "Open with Live Server".
+        * Alternativamente, você pode clicar no botão "Go Live" que aparece no canto inferior direito da janela do VS Code após abrir um arquivo HTML.
+
+    Ao utilizar o Live Server, um servidor de desenvolvimento local será iniciado e o projeto será aberto automaticamente no seu navegador. Qualquer alteração que você fizer nos arquivos HTML, CSS ou JavaScript será automaticamente refletida no navegador após salvar.
+
+
 ## 🧩 Créditos
 
 Desenvolvido por [Pedro Lucas Rosa Rezende] (Estagiário de TI - Paulista) — [https://www.linkedin.com/in/pedro-lucas-rosa-rezende-282ba02b6/](https://www.linkedin.com/in/pedro-lucas-rosa-rezende-282ba02b6/)
